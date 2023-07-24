@@ -84,6 +84,13 @@ const provider = builderRspackProvider({
             )),
             {
               generateScopedName: config.cssScopeName,
+              webpackHotModuleReloading: true,
+              handleMissingStyleName: 'warn',
+              'filetypes': {
+                '.scss': {
+                  'syntax': 'postcss-scss',
+                },
+              },
             },
           ],
         ]);
