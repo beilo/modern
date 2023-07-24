@@ -47,3 +47,8 @@ git push origin master
 
 我是用https clone下来的，我想切换成ssh 应该怎么处理
 git remote set-url origin git@github.com:beilo/mlz-pack.git
+
+changesets 工作流
+npx changeset
+npx changeset version
+npx changeset publish
