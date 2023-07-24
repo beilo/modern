@@ -1,5 +1,11 @@
 # @beilo/modern
 
+## 1.1.5
+
+### Patch Changes
+
+- add react-css-modules config
+
 ## 1.1.4
 
 ### Patch Changes
