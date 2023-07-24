@@ -1,0 +1,49 @@
+
+碰到的问题
+npm 发包流程
+npm login
+npm publish
+
+npm ERR! code E403
+npm ERR! 403 403 Forbidden  [FORBIDDEN] Public registration is not allowed
+npm ERR! 403 In most cases, you or one of your dependencies are requesting
+npm ERR! 403 a package version that is forbidden by your security policy, or
+npm ERR! 403 on a server you do not have access to.
+这个原因是我的registry是taobao的
+解法:
+npm config get registry
+打印出当前的registry
+npm config set registry https://registry.npmjs.org/
+设置到npm registry
+
+npm publish发布上去的包应该提供哪些package.json信息
+在使用 `npm publish` 命令将包发布到 npm 上时，需要确保您的包含有正确的 package.json 信息。以下是一些应该提供的 package.json 字段：
+- name：包名称，必须是唯一的，这个字段是必需的
+- version：包版本号，必须是 SEMVER 规范，这个字段是必需的
+- description: 包描述
+- main：包的入口文件，即 require 包时的默认文件路径，如 `index.js`
+- keywords: 关键字数组
+- repository: 托管代码的代码库链接
+- author：作者信息，可以是一个字符串或者包含 name 和 email 字段的对象
+- license：开源协议名称或链接等信息
+- bugs: 报告错误和缺陷的链接或邮箱地址
+- homepage: 包的主页
+在确定好 package.json 信息后，可以在终端使用 `npm publish` 命令将包发布到 npm 上。请注意，在发布包之前，需要先登录 npm 账户，使用 `npm login` 命令进行登录。
+
+npm ERR! code E402
+npm ERR! 402 Payment Required - PUT https://registry.npmjs.org/@beilo%2ftransform-stylename - You must sign up for private packages
+我的name是@beilo/transform-stylename.
+@npm/package-name 这种形式的包名，是有作用域的包名形式，执行 npm publish 的时候默认是发布私有的包。因此，第一种方式是花钱买私有包的服务，
+另外一种方式就是指定参数，表示公开：npm publish --access public
+解法:
+npm publish --access public
+
+我fork了一个库，怎么同步代码
+git remote add upstream https://github.com/juicecube/mlz-pack.git
+git fetch upstream
+git checkout master
+git merge upstream/master
+git push origin master
+
+我是用https clone下来的，我想切换成ssh 应该怎么处理
+git remote set-url origin git@github.com:beilo/mlz-pack.git

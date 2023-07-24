@@ -1,0 +1,1 @@
+{"version":3,"file":"css/index.css","sources":["./example/styles.css"],"sourcesContent":[".title {\n    color: red;\n    font-size: 20px;\n}\n\n.container {\n    width: 100%;\n    height: 100%;\n    background-color: #f1f1f1;\n    padding: 20px;\n    box-sizing: border-box;\n}"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AAEA;AACA;AACA;AACA;AACA;AACA;AAAA;AAAA;AACA"}
