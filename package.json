@@ -33,7 +33,9 @@
     "@modern-js/builder-plugin-node-polyfill": "2.23.0",
     "@modern-js/builder-rspack-provider": "2.23.0",
     "@modern-js/builder-webpack-provider": "2.23.0",
-    "lodash": "4.17.21"
+    "lodash": "4.17.21",
+    "postcss-less": "6.0.0",
+    "postcss-scss": "4.0.6"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.2",

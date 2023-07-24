@@ -25,6 +25,12 @@ dependencies:
   lodash:
     specifier: 4.17.21
     version: 4.17.21
+  postcss-less:
+    specifier: ^6.0.0
+    version: 6.0.0(postcss@8.4.21)
+  postcss-scss:
+    specifier: ^4.0.6
+    version: 4.0.6(postcss@8.4.21)
 
 devDependencies:
   '@changesets/cli':
@@ -5812,6 +5818,15 @@ packages:
       postcss: 8.4.21
     dev: false
 
+  /postcss-less@6.0.0(postcss@8.4.21):
+    resolution: {integrity: sha512-FPX16mQLyEjLzEuuJtxA8X3ejDLNGGEG503d2YGZR5Ask1SpDN8KmZUMpzCvyalWRywAn1n1VOA5dcqfCLo5rg==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      postcss: ^8.3.5
+    dependencies:
+      postcss: 8.4.21
+    dev: false
+
   /postcss-merge-longhand@6.0.0(postcss@8.4.21):
     resolution: {integrity: sha512-4VSfd1lvGkLTLYcxFuISDtWUfFS4zXe0FpF149AyziftPFQIWxjvFSKhA4MIxMe4XM3yTDgQMbSNgzIVxChbIg==}
     engines: {node: ^14 || ^16 || >=18.0}
@@ -6041,6 +6056,15 @@ packages:
     dependencies:
       postcss: 8.4.21
       postcss-value-parser: 4.2.0
+    dev: false
+
+  /postcss-scss@4.0.6(postcss@8.4.21):
+    resolution: {integrity: sha512-rLDPhJY4z/i4nVFZ27j9GqLxj1pwxE80eAzUNRMXtcpipFYIeowerzBgG3yJhMtObGEXidtIgbUpQ3eLDsf5OQ==}
+    engines: {node: '>=12.0'}
+    peerDependencies:
+      postcss: ^8.4.19
+    dependencies:
+      postcss: 8.4.21
     dev: false
 
   /postcss-selector-parser@6.0.13:

@@ -2,7 +2,6 @@ const path = require("path");
 import { createBuilder } from "@modern-js/builder";
 import { builderRspackProvider } from "@modern-js/builder-rspack-provider";
 import { builderPluginNodePolyfill } from "@modern-js/builder-plugin-node-polyfill";
-import { getLocalIdent } from "@dr.pogodin/babel-plugin-react-css-modules/utils";
 
 const isDev = process.env.NODE_ENV === "development";
 import { config } from "./config";
@@ -85,10 +84,14 @@ const provider = builderRspackProvider({
             {
               generateScopedName: config.cssScopeName,
               webpackHotModuleReloading: true,
-              handleMissingStyleName: 'warn',
-              'filetypes': {
-                '.scss': {
-                  'syntax': 'postcss-scss',
+              handleMissingStyleName: "warn",
+              autoResolveMultipleImports: true,
+              filetypes: {
+                ".scss": {
+                  syntax: require.resolve("postcss-scss"),
+                },
+                ".less": {
+                  syntax: require.resolve("postcss-less"),
                 },
               },
             },
